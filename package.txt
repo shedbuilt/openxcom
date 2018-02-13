@@ -1,7 +1,7 @@
 NAME=openxcom
 VERSION=1.00-GIT
-REVISION=1
+REVISION=2
 SRC=https://github.com/SupSuper/OpenXcom.git
-REF=REF=refs/heads/master
+REF=refs/heads/master
 CLEANUP=yes
 BUILDDEPS=sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
