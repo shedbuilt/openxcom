@@ -1,0 +1,10 @@
+--- a/src/pch.h	2018-02-13 07:21:29.591864728 -1000
++++ b/src/pch.h	2018-02-13 07:22:07.074787981 -1000
+@@ -112,7 +112,6 @@
+ #include <SDL_image.h>
+ #include <SDL_keysym.h>
+ #include <SDL_mixer.h>
+-#include <SDL_opengl.h>
+ #include <SDL_syswm.h>
+ #include <SDL_thread.h>
+ #include <SDL_types.h>

@@ -1,6 +1,6 @@
 NAME=openxcom
-VERSION=1.00-GIT
-REVISION=3
+VERSION=GIT_MASTER
+REVISION=4
 SRC=https://github.com/SupSuper/OpenXcom.git
 REF=refs/heads/master
 CLEANUP=yes
