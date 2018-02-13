@@ -5,3 +5,4 @@ SRC=https://github.com/SupSuper/OpenXcom.git
 REF=refs/heads/master
 CLEANUP=yes
 BUILDDEPS=sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
+INSTALLDEPS=sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
