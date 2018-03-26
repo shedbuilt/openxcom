@@ -1,8 +1,9 @@
 NAME=openxcom
 VERSION=GIT_MASTER
-REVISION=4
+REVISION=5
+LICENSE=GPL-3.0-or-later
 SRC=https://github.com/SupSuper/OpenXcom.git
 REF=refs/heads/master
-CLEANUP=yes
+PURGE=yes
 BUILDDEPS=sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
 INSTALLDEPS=sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
