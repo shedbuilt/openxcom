@@ -1,6 +1,6 @@
 NAME=openxcom
 VERSION=GIT_MASTER
-REVISION=5
+REVISION=1
 LICENSE=GPL-3.0-or-later
 SRC=https://github.com/SupSuper/OpenXcom.git
 REF=refs/heads/master
