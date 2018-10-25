@@ -1,0 +1,14 @@
+--- a/configure.ac	2018-10-25 07:54:34.454078074 -1000
++++ b/configure.ac	2018-10-25 08:00:53.844883659 -1000
+@@ -102,7 +102,10 @@
+ # ==================
+ PKG_CHECK_MODULES([SDL],[sdl >= 1.2.13 SDL_mixer >= 1.2.11 SDL_gfx >= 2.0.22 SDL_image >= 1.2])
+ PKG_CHECK_MODULES([YAML],[yaml-cpp >= 0.5.0])
+-AX_CHECK_GL
++AX_CHECK_GL(, [
++	AC_DEFINE([__NO_OPENGL], [1], [Defined if no valid OpenGL implementation is found.])
++	GL_LIBS=""
++	])
+
+ AC_CONFIG_FILES([
+ 	Makefile

@@ -1,6 +1,6 @@
 NAME=openxcom
 VERSION=44f732b
-REVISION=2
+REVISION=3
 LICENSE=GPL-3.0-or-later
 SRC=https://github.com/SupSuper/OpenXcom.git
 COMMIT=44f732b601640ee2bef7dbeb8dc7cf693f1e5b58
