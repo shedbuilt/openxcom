@@ -9,6 +9,7 @@ fi
 ./autogen.sh &&
 ./configure --prefix=/usr/local \
             --without-docs \
-            --without-man &&
-make -j $SHED_NUM_JOBS &&
+            --without-man \
+            --disable-werror &&
+make -j 1 &&
 make DESTDIR="$SHED_FAKE_ROOT" install
