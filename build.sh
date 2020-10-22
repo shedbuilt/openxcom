@@ -1,11 +1,15 @@
 #!/bin/bash
+declare -A SHED_PKG_LOCAL_OPTIONS=${SHED_PKG_OPTIONS_ASSOC}
+# Configure
+if [ -z "${SHED_PKG_LOCAL_OPTIONS[gl]}" ]; then
+    # Fix broken no-GL support
+    patch -Np1 -i "${SHED_PKG_PATCH_DIR}/remove_duplicate_SDL_opengl_include.patch" &&
+    patch -Np1 -i "${SHED_PKG_PATCH_DIR}/openxcom-allow-no-opengl-config.patch" || exit 1
+fi
 ./autogen.sh &&
 ./configure --prefix=/usr/local \
             --without-docs \
             --without-man \
-            --with-gl=no &&
-# Fix broken no-GL support
-sed -i "/^DEFS = / s/\$/ -D__NO_OPENGL/" Makefile &&
-patch -Np1 -i "${SHED_PATCHDIR}/remove_duplicate_SDL_opengl_include.patch" &&
-make -j $SHED_NUMJOBS &&
-make DESTDIR="$SHED_FAKEROOT" install
+            --disable-werror &&
+make -j 2 &&
+make DESTDIR="$SHED_FAKE_ROOT" install

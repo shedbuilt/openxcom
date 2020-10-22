@@ -1,9 +1,11 @@
 NAME=openxcom
-VERSION=GIT_MASTER
+VERSION=02bac59
 REVISION=5
 LICENSE=GPL-3.0-or-later
 SRC=https://github.com/SupSuper/OpenXcom.git
-REF=refs/heads/master
+COMMIT=02bac59cb8c83b367d8ae659513c437f4f56b8c9
 PURGE=yes
-BUILDDEPS=sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
-INSTALLDEPS=sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
+BUILDDEPS=gl:gl4es gl:glu sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
+INSTALLDEPS=gl:gl4es gl:glu sdl sdl-mixer sdl-gfx sdl-image yaml-cpp
+OPTIONS=(gl)
+DEFAULTS=
