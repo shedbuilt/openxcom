@@ -11,5 +11,5 @@ fi
             --without-docs \
             --without-man \
             --disable-werror &&
-make -j $SHED_NUM_JOBS &&
+make -j 2 &&
 make DESTDIR="$SHED_FAKE_ROOT" install
